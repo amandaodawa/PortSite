@@ -1,34 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>    
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=0.1">
-     <title>Jane's art portifolio</title>
+     <link rel="stylesheet" href="css/styles.css">
+     <link rel="stylesheet" href="css/menu.css">
+     <title>John's art portifolio</title>
 </head>
-<body>
+
+<body> 
     <header>
-        <div class="mylogo">
-            <img src="images/sam_logo.png" width="50" length="50" alt="site logo">
-        </div>
+    <!--logo-->
+    <div class="mylogo">
+        <img src="images/sam_logo.png" width="50" length="50" right="0" alt="site logo">
+    </div>
 
-        <button class="nav-btn" aria-label="nav-button">
-             <span class="btn"></span>
-        </button>
+    <!--navigation-->    
+    <div class="hamburgar-menu">
+    <input type="checkbox" id="menu-toggle"/>
+    <label class="menu-btn" for="menu-toggle">
+        <span></span>
+    </label>
 
-        <nav class="mynav">
-            <ul class="mynav_ul">
+            <ul class="menu-box">
                 <li class="mynav_item"><a href="#home" class="mynav_link">Home</a></li>
                 <li class="mynav_item"><a href="#skills" class="mynav_link">Creative Styles</a></li>
                 <li class="mynav_item"><a href="#about" class="mynav_link">About Me</a></li>
                 <li class="mynav_item"><a href="#projects" class="mynav_link">Art Projects</a></li>
             </ul>
-        </nav>
+        
+    </div>
     </header>
 
     <!--Top introduction section-->
     <section class="topintro" id="home">
         <h1 class="sectitle sectitle_intro">
-            Hello. I am<strong> Jane Jones</strong>. A self taught artist.
+            Hello. I am<strong> John Doe</strong>. A self taught artist.
         </h1>
 
         <p class="secsubtitle secsubtitle_intro"><strong>I present to you my art portifolio</strong></p>
@@ -76,12 +84,15 @@
         <div>
             <p>
                 I am self-taught Kenyan painter and artist with over 5 years
-                of expeerience in creative work. I have created paintings for both personal 
+                of experience in creative work. I have created paintings for both personal 
                 and commercial decorations. Below, you will find some of my best 
                 works, and projects that I really enjoyed working on.
             </p>
         </div>
+
+        <div>
         <img src="images/artist.jpg" alt="full artist image" class="bio_img">
+        </div>
     </section>
 
     <!--My art project-->
@@ -123,9 +134,9 @@
         </div>
     </section>
 
-    <!--footer(remember to change email address)-->
+    <!--footer-->
     <footer class="footer">
-        <a href="mailto:fort.smg@gmail.com" class="footer_link">fort.smg@gmail.com</a>
+        <a href="mailto:fort.smg@gmail.com" class="footer_link">johndoe@gmail.com</a>
 
         <ul class="social_links">
             <li class="socialitem">

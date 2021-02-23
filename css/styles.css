@@ -1,0 +1,276 @@
+/*general*/
+html{
+  scroll-behavior: auto;
+}
+
+body {
+  background:whitesmoke;
+  color: black;
+  margin: 0;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: inherit;
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+section{
+   padding: 1em 2em;
+}
+
+
+/*hamburger menu*/
+#menu-toggle {
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-btn > span {
+  transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before {
+  top: 0;
+  transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after {
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menu-box {
+  visibility: visible;
+  right: 0;
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 2.5%;
+  right: 2%;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #616161;
+  transition-duration: .25s;
+}
+
+.menu-btn > span::before {
+  content: '';
+  top: -8px;
+}
+
+.menu-btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menu-box {
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  right: -100%;
+  width: 200px;
+  height: 100%;
+  margin: 0;
+  padding: 10% 0;
+  list-style: none;
+  background-color: #ECEFF1;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  transition-duration: .25s;
+}
+
+.mynav_link {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+
+.mynav_link:hover {
+  background-color: #CFD8DC;
+}
+
+/*Top introduction section*/
+.topintro{
+  display: block;
+  padding: 12px 24px;
+  text-align-last: center;
+  border:3px solid cadetblue;
+  border-radius: 0;
+  border-style: solid;
+  align-items:center;
+  font-size: 1.7em;
+  font-style: normal;
+}
+
+.secsubtitle{
+  background-color: cadetblue;
+  font-style: italic;
+  color:#333;
+}
+
+
+/*creative styles*/
+.myskills {
+  background-color: whitesmoke;
+  background-image: url(../images/img8.jpg);
+  background-size: 100% 100%;
+  color: var(beige);
+  background-blend-mode: normal;
+  text-align: center;
+}
+
+.skills {
+  margin-bottom: 3.5em;
+}
+
+.skill {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+@media(min-width: 1000px){
+  .skills {
+    display: block;
+    max-width: 2000px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .button {
+    display:inline-block;
+    padding: .5em 1.2em;
+    background-color: cadetblue;
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: normal;
+    transition: opacity 1s ease-in-out;
+
+  }
+  
+  .button:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }  
+}
+ 
+/*the artist bio-->*/
+  .bio {
+    display: block;
+    text-align: center;
+    border:3px solid cadetblue;
+    border-radius: 0;
+    border-style: solid;
+    align-items:center;
+  }
+
+  .sectitle_bio {
+    grid-area: title;
+  }
+
+  .secsubtitle_bio {
+    grid-row: 5;
+  }
+
+  .bio_img {
+    grid-area: image;
+    height: 350px;
+    width: 400px;
+}
+
+/*My art project */
+.myprojects {
+  background-color: Blue(--clr-light);
+  color: Black(--clr-light);
+  text-align: center;
+  background-image: url(../images/img7.jpg);
+  background-blend-mode: normal;
+}
+
+.mywork{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 2fr));
+}
+
+.workpiece_img {
+  height: 300px;
+  width: 400px;
+  padding: .3rem;
+}
+
+/*footer*/    
+.footer {
+  background: cadetblue;
+  color: var(--clr-light);
+  text-align:center;
+  padding: 2em 0;
+  font-size: var(--fs-h3);
+  font-weight: bold;
+}
+
+.footer a {
+  color: black;
+  text-decoration: none;
+}
+
+.footer_link{
+  font-weight: var(--fw-bold);
+}
+
+.footer_link:hover {
+  text-decoration: underline;
+}
+
+.footer_link:hover, socialitemlink:hover{
+  opacity: 50%;
+
+}
+
+.social_links{
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2em 0;
+  padding: 0;
+}
+
+.socialitem {
+  display: block;
+  margin: 0 .9em;
+
+}
+
+.socialitem_link{
+  padding: .3em;
+}
+
+.portfolio_detail {
+    padding: 0 2.5em 2.5em;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.portfolio_detail p {
+  max-width: 800px;
+}
+  
